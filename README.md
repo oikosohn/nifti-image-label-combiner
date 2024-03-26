@@ -2,7 +2,7 @@
 Combine multiple label maps into a single one.
 
 
-# Python code
+# Python Code
 TBD
 
 
