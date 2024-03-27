@@ -19,7 +19,7 @@ def process_nii_files(uploaded_files, label_value):
     f = BytesIO()
     
     header, image, combined_file = None, None, None
-    before_combine_label, after_combine_label = {}, {}
+    before_combine_label = {}
     for idx, uploaded_file in enumerate(uploaded_files):
         
         file_data = uploaded_file.read()
@@ -68,7 +68,7 @@ def main():
     st.title('NILC: NIfTI Image Label Combiner - Streamlit')
     url = 'https://github.com/oikosohn/nifti-image-label-combiner/edit/streamlit/'
     st.markdown(f'This app does not save your files. If you want code for local execution, please visit [this repository]({url}).')
-    st.markdown(''' \n You can also find the streamlit demo code in [![Repo](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/oikosohn/nifti-label-combiner/tree/streamlit)''', unsafe_allow_html=True)
+    st.markdown('''You can also find the streamlit demo code in [![Repo](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/oikosohn/nifti-label-combiner/tree/streamlit)''', unsafe_allow_html=True)
     st.header(':one: Upload Files')
     
     
@@ -78,7 +78,7 @@ def main():
         st.info('No files uploaded.')
         return
     
-    st.header(':two: Enter File Name and Value')
+    st.header(':two: Enter Filename and Value')
     
     output_filename = st.text_input('Enter File Name (Default name is your first label filename)', uploaded_files[0].name)
     label_value = st.text_input('Enter Label Value (Default value is 1)', 1)
