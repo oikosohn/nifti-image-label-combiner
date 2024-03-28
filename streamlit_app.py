@@ -66,7 +66,7 @@ def make_df(label_info):
     
 def main():
     st.title('NILC: NIfTI Image Label Combiner - Streamlit')
-    url = 'https://github.com/oikosohn/nifti-image-label-combiner/edit/streamlit/'
+    url = 'https://github.com/oikosohn/nifti-image-label-combiner'
     st.markdown(f'This app does not save your files. If you want code for local execution, please visit [this repository]({url}).')
     st.markdown('''You can also find the streamlit demo code in [![Repo](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/oikosohn/nifti-label-combiner/tree/streamlit)''', unsafe_allow_html=True)
     st.header(':one: Upload Files')
